@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="logo-container">
+            <img src="candylogo.png" alt="Game Logo" class="rotating-logo">
+        </div>
+    </div>
+    <div id="menu-container" class="container hidden">
+        <div class="menu">
+            <button class="menu-button" onclick="showGame()">Play</button>
+            <button class="menu-button" onclick="showAbout()">About Game</button>
+            <button class="menu-button" onclick="showHowToPlay()">How to Play?</button>
+            <button class="menu-button" onclick="exitGame()">Exit</button>
+        </div>
+    </div>
+    <div id="game-container" class="container hidden">
+        <div class="game-board">
+            <!-- Game board will be generated here -->
+        </div>
+        <button class="menu-button" onclick="startGame()">Start</button>
+        <button class="menu-button" onclick="backToMenu()">Back to Menu</button>
+    </div>
+    <div id="about-container" class="container hidden">
+        <div class="content-box">
+            <h1>About the Game</h1>
+            <p>This is a fun match-three game where you try to get three identical symbols in a row. Tap to start rolling the icons and see if you can win!</p>
+            <button class="menu-button" onclick="backToMenu()">Back to Menu</button>
+        </div>
+    </div>
+    <div id="how-to-play-container" class="container hidden">
+        <div class="content-box">
+            <h1>How to Play</h1>
+            <p>1. Tap the "Start" button to begin the game.</p>
+            <p>2. The icons will start rolling randomly.</p>
+            <p>3. Try to get three identical symbols in a row to win.</p>
+            <p>4. If you do not get three in a row, you lose and can try again by tapping "Start".</p>
+            <button class="menu-button" onclick="backToMenu()">Back to Menu</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
